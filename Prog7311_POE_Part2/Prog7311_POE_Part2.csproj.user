@@ -10,6 +10,9 @@
     <Compile Update="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ServiceRequestStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="MainMenu.af-ZA.resx">

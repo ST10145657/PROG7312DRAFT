@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Prog7311_POE_Part2
 {
-    class IssueReport
+    public class IssueReport
     {
         public string Location { get; set; }
         public string Category { get; set; }

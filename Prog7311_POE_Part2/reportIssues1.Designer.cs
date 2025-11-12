@@ -85,17 +85,18 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(760, 436);
+            btnBack.BackColor = Color.Red;
+            btnBack.Location = new Point(760, 432);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(204, 42);
+            btnBack.Size = new Size(204, 51);
             btnBack.TabIndex = 14;
-            btnBack.Text = "Back to Menu";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
             // btnSubmit
             // 
-            btnSubmit.BackColor = Color.Red;
+            btnSubmit.BackColor = Color.Green;
             btnSubmit.Location = new Point(449, 432);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(204, 51);
@@ -150,7 +151,8 @@
             Controls.Add(cmbCategory);
             Controls.Add(txtLocation);
             Name = "reportIssues1";
-            Text = "reportIsssue";
+            Text = "Report Isssue";
+            Load += reportIssues1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

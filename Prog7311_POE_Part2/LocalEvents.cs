@@ -1,22 +1,37 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Prog7311_POE_Part2
 {
     public partial class LocalEvents : Form
     {
         // Store events grouped by category
-        
+
         private SortedDictionary<DateTime, List<LocalEvent>> eventsByDate;
 
 
         public LocalEvents()
         {
             InitializeComponent();
+
+            listViewEvents.View = View.Details;
+            listViewEvents.FullRowSelect = true;
+            listViewEvents.GridLines = true;
+
+            // Clear existing columns and add new ones
+            listViewEvents.Columns.Clear();
+            listViewEvents.Columns.Add("Title", 180);
+            listViewEvents.Columns.Add("Category", 100);
+            listViewEvents.Columns.Add("Date", 100);
+            listViewEvents.Columns.Add("Description", 250);
+
             LoadSampleData();
             DisplayAllEvents();
-            DisplayInDataGridView(); // 🔹 NEW: show events in DataGridView
+            DisplayInDataGridView();
+
+
         }
 
         private void LoadSampleData()
@@ -32,84 +47,10 @@ namespace Prog7311_POE_Part2
             }
 
             // 🧹 Community Events
-            AddEvent(new LocalEvent
-            {
-                Title = "Park Cleanup",
-                Category = "Community",
-                Date = DateTime.Now.AddDays(2),
-                Description = "Join the community to clean up Greenfield Park. Gloves and bags provided."
-            });
-            AddEvent(new LocalEvent
-            {
-                Title = "Township Beautification Day",
-                Category = "Community",
-                Date = DateTime.Now.AddDays(5),
-                Description = "Help paint, plant trees, and clean up your local area. Everyone welcome!"
-            });
+            AddEvent(new LocalEvent { Title = "Park Cleanup", Category = "Community", Date = DateTime.Now.AddDays(2), Description = "Join the community to clean up Greenfield Park. Gloves and bags provided." });
+            AddEvent(new LocalEvent { Title = "Coding for Beginners Workshop", Category = "Education", Date = DateTime.Now.AddDays(4), Description = "Free coding class hosted by the local library." });
+            AddEvent(new LocalEvent { Title = "Blood Donation Drive", Category = "Health", Date = DateTime.Now.AddDays(1), Description = "Donate blood and help save lives. Refreshments provided." });
 
-            // 🏫 Education & Youth
-            AddEvent(new LocalEvent
-            {
-                Title = "Coding for Beginners Workshop",
-                Category = "Education",
-                Date = DateTime.Now.AddDays(4),
-                Description = "Free coding class hosted by the local library. Learn basic programming concepts."
-            });
-            AddEvent(new LocalEvent
-            {
-                Title = "Matric Study Support Session",
-                Category = "Education",
-                Date = DateTime.Now.AddDays(7),
-                Description = "Get help from tutors in maths and science before exams."
-            });
-
-            // ❤️ Health & Wellness
-            AddEvent(new LocalEvent
-            {
-                Title = "Community Health Screening",
-                Category = "Health",
-                Date = DateTime.Now.AddDays(3),
-                Description = "Free blood pressure, diabetes, and cholesterol screening at the civic centre."
-            });
-            AddEvent(new LocalEvent
-            {
-                Title = "Blood Donation Drive",
-                Category = "Health",
-                Date = DateTime.Now.AddDays(1),
-                Description = "Donate blood and help save lives. Refreshments provided."
-            });
-
-            // 💼 Municipal Announcements
-            AddEvent(new LocalEvent
-            {
-                Title = "Water Maintenance Notice",
-                Category = "Municipal",
-                Date = DateTime.Now.AddDays(6),
-                Description = "Scheduled water maintenance in the northern suburbs. Expect low pressure."
-            });
-            AddEvent(new LocalEvent
-            {
-                Title = "Public Safety Awareness Day",
-                Category = "Municipal",
-                Date = DateTime.Now.AddDays(8),
-                Description = "Meet your local SAPS and fire department teams. Learn about safety tips."
-            });
-
-            // 🎉 Cultural & Recreational
-            AddEvent(new LocalEvent
-            {
-                Title = "Heritage Day Celebration",
-                Category = "Cultural",
-                Date = DateTime.Now.AddDays(10),
-                Description = "Celebrate local culture, food, and music at Freedom Square."
-            });
-            AddEvent(new LocalEvent
-            {
-                Title = "Community Fun Run",
-                Category = "Recreation",
-                Date = DateTime.Now.AddDays(12),
-                Description = "5km fun run/walk for all ages. Starts at the community hall."
-            });
         }
 
 
@@ -118,6 +59,7 @@ namespace Prog7311_POE_Part2
         {
             listViewEvents.Items.Clear();
 
+            // 🟢 Show default local events
             foreach (var category in eventsByDate.Values)
             {
                 foreach (var ev in category)
@@ -126,27 +68,62 @@ namespace Prog7311_POE_Part2
                     item.SubItems.Add(ev.Category);
                     item.SubItems.Add(ev.Date.ToShortDateString());
                     item.SubItems.Add(ev.Description);
+                    listViewEvents.Items.Add(item);
+                }
+            }
 
+            // 🟡 Show reported issues from ReportIssue form
+            if (SharedData.ReportedIssues.Count > 0)
+            {
+                var header = new ListViewItem("—— Reported Issues ——");
+                header.ForeColor = System.Drawing.Color.DarkBlue;
+                listViewEvents.Items.Add(header);
+
+                foreach (var issue in SharedData.ReportedIssues)
+                {
+                    var item = new ListViewItem($"Issue at: {issue.Location}");
+                    item.SubItems.Add(issue.Category);
+                    item.SubItems.Add(DateTime.Now.ToShortDateString());
+                    item.SubItems.Add(issue.Description);
                     listViewEvents.Items.Add(item);
                 }
             }
         }
 
+
+
         // 🔹 NEW: Display events in DataGridView
         private void DisplayInDataGridView()
         {
-            var allEvents = eventsByDate.Values.SelectMany(list => list).ToList();
+            // Combine sample events + reported issues into one list for DataGridView
+            var allEvents = eventsByDate.Values.SelectMany(list => list)
+                .Select(ev => new
+                {
+                    Title = ev.Title,
+                    Category = ev.Category,
+                    Date = ev.Date.ToShortDateString(),
+                    Description = ev.Description
+                })
+                .ToList();
 
-            dataGridView1.DataSource = null; // reset
+            // Add reported issues
+            allEvents.AddRange(SharedData.ReportedIssues.Select(issue => new
+            {
+                Title = $"Issue at: {issue.Location}",
+                Category = issue.Category,
+                Date = DateTime.Now.ToShortDateString(),
+                Description = issue.Description
+            }));
+
+            dataGridView1.DataSource = null;
             dataGridView1.DataSource = allEvents;
 
-            // Optional: styling
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ReadOnly = true;
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnSearch_Click_1(object sender, EventArgs e)
         {
             string searchText = txtSearch.Text.Trim().ToLower();
             DateTime selectedDate = dateTimePicker1.Value.Date;
@@ -158,7 +135,29 @@ namespace Prog7311_POE_Part2
                     ev.Category.ToLower().Contains(searchText) ||
                     ev.Description.ToLower().Contains(searchText) ||
                     ev.Date.Date == selectedDate)
+               .Select(ev => new
+               {
+                   ev.Title,
+                   ev.Category,
+                   Date = ev.Date.ToShortDateString(),
+                   ev.Description
+               })
                 .ToList();
+
+            // Include Reported Issues in search results
+            results.AddRange(SharedData.ReportedIssues
+                .Where(issue =>
+                    issue.Location.ToLower().Contains(searchText) ||
+                    issue.Category.ToLower().Contains(searchText) ||
+                    issue.Description.ToLower().Contains(searchText))
+                .Select(issue => new
+                {
+                    Title = $"Issue at: {issue.Location}",
+                    Category = issue.Category,
+                    Date = DateTime.Now.ToShortDateString(),
+                    Description = issue.Description
+                }));
+
 
             listViewEvents.Items.Clear();
 
@@ -166,7 +165,7 @@ namespace Prog7311_POE_Part2
             {
                 var item = new ListViewItem(ev.Title);
                 item.SubItems.Add(ev.Category);
-                item.SubItems.Add(ev.Date.ToShortDateString());
+                item.SubItems.Add(ev.Date);
                 item.SubItems.Add(ev.Description);
 
                 listViewEvents.Items.Add(item);
@@ -190,8 +189,45 @@ namespace Prog7311_POE_Part2
         }
 
         // Keep all other empty event handlers as-is
-        private void btnSearch_Click_1(object sender, EventArgs e) { }
+        //private void btnSearch_Click_1(object sender, EventArgs e) { }
         private void txtSearch_TextChanged(object sender, EventArgs e) { }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewEvents.SelectedItems.Count == 0)
+                return; // nothing selected
+
+            var selectedItem = listViewEvents.SelectedItems[0];
+
+            string title = selectedItem.SubItems[0].Text;
+            string category = selectedItem.SubItems[1].Text;
+            string date = selectedItem.SubItems[2].Text;
+            string description = selectedItem.SubItems[3].Text;
+
+            string message = $"Title: {title}\nCategory: {category}\nDate: {date}\nDescription: {description}";
+
+            MessageBox.Show(message, "Event / Issue Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void LocalEvents_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string CurrentCultureCode { get; set; } = "en-US";
+
+        public void ChangeLanguage(string langCode)
+        {
+            CurrentCultureCode = langCode;
+            // Update all button/label texts based on langCode
+        }
+
     }
 }

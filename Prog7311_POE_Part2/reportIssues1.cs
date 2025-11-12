@@ -7,17 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Prog7311_POE_Part2.SharedData;
 
 namespace Prog7311_POE_Part2
 {
     public partial class reportIssues1 : Form
     {
-        public reportIssues1() 
+
+        public reportIssues1()
         {
             InitializeComponent();
-
+            LoadCategories();
         }
 
+        private void LoadCategories()
+        {
+            cmbCategory.Items.Clear();
+            cmbCategory.Items.AddRange(new string[]
+            {
+                "Sanitation",
+                "Road",
+                "Utilities",
+                "Electricity",
+                "Water",
+                "Public Safety"
+            });
+        }
 
         private void UpdateProgress()
         {
@@ -31,22 +46,9 @@ namespace Prog7311_POE_Part2
             progressBar.Value = progress;
         }
 
-        private void txtLocation_TextChanged_1(object sender, EventArgs e)
-        {
-            UpdateProgress();
-        }
-
-        private void cmbCategory_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            UpdateProgress();
-        }
-
-        private void rtbDescription_TextChanged_1(object sender, EventArgs e)
-        {
-            UpdateProgress();
-        }
-
-      
+        private void txtLocation_TextChanged_1(object sender, EventArgs e) => UpdateProgress();
+        private void cmbCategory_SelectedIndexChanged_1(object sender, EventArgs e) => UpdateProgress();
+        private void rtbDescription_TextChanged_1(object sender, EventArgs e) => UpdateProgress();
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -59,6 +61,7 @@ namespace Prog7311_POE_Part2
                 return;
             }
 
+            // Create new issue object
             IssueReport issue = new IssueReport
             {
                 Location = txtLocation.Text,
@@ -67,25 +70,38 @@ namespace Prog7311_POE_Part2
                 AttachmentPath = lblAttachment.Text
             };
 
-            MessageBox.Show("Issue submitted:\n" +
-                            $"Location: {issue.Location}\n" +
-                            $"Category: {issue.Category}\n" +
-                            $"Description: {issue.Description}\n" +
-                            $"Attachment: {issue.AttachmentPath}",
-                            "Submission Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // ✅ Save issue into shared list so LocalEvents can access it
+            SharedData.ReportedIssues.Add(issue);
 
-            // Reset after submission
+            int newId = SharedServiceRequests.GetNextId();
+
+            var request = new ServiceRequest(
+            id: SharedServiceRequests.RequestHeap.GetAllRequests().Count + 1, // auto ID
+            location: txtLocation.Text,
+            category: cmbCategory.SelectedItem?.ToString(),
+            description: rtbDescription.Text,
+            status: "Submitted",
+            priority: 1 // can change later (1 = low, 5 = high)
+            );
+
+            SharedServiceRequests.RequestBST.Insert(request);
+            SharedServiceRequests.RequestHeap.Insert(request);
+            SharedServiceRequests.RequestGraph.AddRequest(request);
+
+            MessageBox.Show("Issue submitted successfully!\n\n" +
+                    $"Service Request ID: {request.ID}\n" +
+                    $"Location: {request.Location}\n" +
+                    $"Category: {request.Category}\n" +
+                    $"Status: {request.Status}\n\n" +
+                    "You can track this request in the Service Request Status screen.",
+                    "Submission Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Reset form
             txtLocation.Clear();
             cmbCategory.SelectedIndex = -1;
             rtbDescription.Clear();
             lblAttachment.Text = "No file attached";
             progressBar.Value = 0;
-        }
-
-
-        private void progressBar_Click(object sender, EventArgs e)
-        {
-            // Nothing needed here (progress updated automatically)
         }
 
         private void btnAttach_Click_1(object sender, EventArgs e)
@@ -101,15 +117,7 @@ namespace Prog7311_POE_Part2
             }
         }
 
-
-
-
-        private void btnAttach_Click(object sender, EventArgs e)
-        {
-            btnAttach_Click_1(sender, e);
-        }
-
-
+        private void btnAttach_Click(object sender, EventArgs e) => btnAttach_Click_1(sender, e);
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -117,5 +125,19 @@ namespace Prog7311_POE_Part2
             menu.Show();
             this.Close();
         }
+
+        private void reportIssues1_Load(object sender, EventArgs e)
+        {
+
+        }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string CurrentCultureCode { get; set; } = "en-US";
+
+        public void ChangeLanguage(string langCode)
+        {
+            CurrentCultureCode = langCode;
+            // Update all button/label texts based on langCode
+        }
+
     }
 }

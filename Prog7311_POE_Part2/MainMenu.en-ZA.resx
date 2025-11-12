@@ -117,7 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Languages.Items1" xml:space="preserve">
+    <value>isiZulu</value>
+  </data>
+  <data name="Languages.Items2" xml:space="preserve">
+    <value>Afrikaans</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Languages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 31</value>
+  </data>
+  <data name="Languages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 77</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Languages.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="btnReport.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt, style=Bold</value>
   </data>
@@ -127,18 +143,14 @@
   <data name="btnReport.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 50</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnReport.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="btnReport.Text" xml:space="preserve">
-    <value>Report</value>
   </data>
   <data name="btnEvents.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt, style=Bold</value>
   </data>
   <data name="btnEvents.Location" type="System.Drawing.Point, System.Drawing">
-    <value>387, 300</value>
+    <value>367, 300</value>
   </data>
   <data name="btnEvents.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 50</value>
@@ -147,22 +159,19 @@
     <value>5</value>
   </data>
   <data name="btnEvents.Text" xml:space="preserve">
-    <value>Events</value>
+    <value>Local Events and Announcements</value>
   </data>
   <data name="btnServices.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt, style=Bold</value>
   </data>
   <data name="btnServices.Location" type="System.Drawing.Point, System.Drawing">
-    <value>652, 300</value>
+    <value>666, 300</value>
   </data>
   <data name="btnServices.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 50</value>
   </data>
   <data name="btnServices.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
-  </data>
-  <data name="btnServices.Text" xml:space="preserve">
-    <value>Support</value>
   </data>
   <data name="btnExit.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt, style=Bold</value>
@@ -177,49 +186,40 @@
     <value>7</value>
   </data>
   <data name="writing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 160</value>
+    <value>111, 169</value>
   </data>
   <data name="writing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 115</value>
+    <value>140, 125</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="writing.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
   <data name="Calendar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>387, 160</value>
+    <value>367, 169</value>
   </data>
   <data name="Calendar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 125</value>
+    <value>139, 125</value>
   </data>
   <data name="Calendar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
   <data name="support.Location" type="System.Drawing.Point, System.Drawing">
-    <value>652, 160</value>
+    <value>666, 169</value>
   </data>
   <data name="support.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 125</value>
+    <value>142, 125</value>
   </data>
   <data name="support.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="Languages.Items1" xml:space="preserve">
-    <value>isiZulu</value>
-  </data>
-  <data name="Languages.Items2" xml:space="preserve">
-    <value>Afrikaans</value>
-  </data>
-  <data name="Languages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>720, 23</value>
-  </data>
-  <data name="Languages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 77</value>
-  </data>
-  <data name="Languages.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>900, 600</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
   </data>
 </root>

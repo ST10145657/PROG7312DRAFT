@@ -41,15 +41,16 @@
             // 
             // listViewEvents
             // 
-            listViewEvents.Location = new Point(65, 279);
+            listViewEvents.Location = new Point(12, 313);
             listViewEvents.Name = "listViewEvents";
-            listViewEvents.Size = new Size(514, 184);
+            listViewEvents.Size = new Size(629, 150);
             listViewEvents.TabIndex = 0;
             listViewEvents.UseCompatibleStateImageBehavior = false;
+            listViewEvents.SelectedIndexChanged += listViewEvents_SelectedIndexChanged;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(137, 138);
+            txtSearch.Location = new Point(275, 33);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(300, 31);
             txtSearch.TabIndex = 5;
@@ -57,45 +58,47 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(137, 199);
+            dateTimePicker1.Location = new Point(275, 97);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(300, 31);
             dateTimePicker1.TabIndex = 2;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(608, 342);
+            btnSearch.BackColor = Color.Green;
+            btnSearch.Location = new Point(647, 342);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(204, 51);
             btnSearch.TabIndex = 3;
             btnSearch.Text = "Search ";
-            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click_1;
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(608, 417);
+            btnBack.BackColor = Color.Red;
+            btnBack.Location = new Point(647, 417);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(204, 46);
             btnBack.TabIndex = 4;
             btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click_1;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(505, 37);
+            dataGridView1.Location = new Point(12, 148);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(360, 225);
+            dataGridView1.Size = new Size(839, 148);
             dataGridView1.TabIndex = 6;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // lbllocation
             // 
             lbllocation.AutoSize = true;
-            lbllocation.Location = new Point(12, 138);
+            lbllocation.Location = new Point(161, 39);
             lbllocation.Name = "lbllocation";
             lbllocation.Size = new Size(84, 25);
             lbllocation.TabIndex = 7;
@@ -104,11 +107,12 @@
             // lblDate
             // 
             lblDate.AutoSize = true;
-            lblDate.Location = new Point(20, 206);
+            lblDate.Location = new Point(196, 103);
             lblDate.Name = "lblDate";
             lblDate.Size = new Size(49, 25);
             lblDate.TabIndex = 8;
             lblDate.Text = "Date";
+            lblDate.Click += lblDate_Click;
             // 
             // LocalEvents
             // 
@@ -125,7 +129,8 @@
             Controls.Add(txtSearch);
             Controls.Add(listViewEvents);
             Name = "LocalEvents";
-            Text = "LocalEvents";
+            Text = "Local Events";
+            Load += LocalEvents_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
