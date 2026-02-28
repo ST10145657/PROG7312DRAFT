@@ -1,11 +1,11 @@
-﻿using Prog7311_POE_Part2.Properties;
+﻿using Prog7312_POE_Part2.Properties;
 using System;
 using System.Drawing;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace Prog7311_POE_Part2
+namespace Prog7312_POE_Part2
 {
     public partial class MainMenu : Form
     {
@@ -28,6 +28,7 @@ namespace Prog7311_POE_Part2
 
         private void InitializeComponent()
         {
+            
             btnReport = new Button();
             btnEvents = new Button();
             btnServices = new Button();
@@ -36,13 +37,13 @@ namespace Prog7311_POE_Part2
             Calendar = new PictureBox();
             support = new PictureBox();
             Languages = new ListBox();
-
             ((System.ComponentModel.ISupportInitialize)writing).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Calendar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)support).BeginInit();
             SuspendLayout();
-
-            // Languages ListBox
+            // 
+            // Languages
+            // 
             Languages.BackColor = Color.White;
             Languages.BorderStyle = BorderStyle.FixedSingle;
             Languages.FormattingEnabled = true;
@@ -50,62 +51,88 @@ namespace Prog7311_POE_Part2
             Languages.Location = new Point(12, 25);
             Languages.Name = "Languages";
             Languages.Size = new Size(120, 77);
+            Languages.TabIndex = 3;
             Languages.SelectedIndexChanged += Languages_SelectedIndexChanged;
-
+            // 
             // btnReport
+            // 
             btnReport.BackColor = Color.FromArgb(128, 128, 255);
             btnReport.Location = new Point(86, 237);
+            btnReport.Name = "btnReport";
             btnReport.Size = new Size(200, 50);
+            btnReport.TabIndex = 4;
             btnReport.Text = "Report Issues";
             btnReport.UseVisualStyleBackColor = false;
             btnReport.Click += btnReport_Click;
-
+            // 
             // btnEvents
+            // 
             btnEvents.BackColor = Color.FromArgb(0, 192, 0);
             btnEvents.Location = new Point(437, 237);
+            btnEvents.Name = "btnEvents";
             btnEvents.Size = new Size(200, 50);
+            btnEvents.TabIndex = 5;
             btnEvents.Text = "Local Events & Announcements";
             btnEvents.UseVisualStyleBackColor = false;
             btnEvents.Click += btnEvents_Click;
-
+            // 
             // btnServices
+            // 
             btnServices.BackColor = Color.FromArgb(0, 192, 192);
             btnServices.Location = new Point(786, 237);
+            btnServices.Name = "btnServices";
             btnServices.Size = new Size(200, 50);
+            btnServices.TabIndex = 6;
             btnServices.Text = "Services Request Status";
             btnServices.UseVisualStyleBackColor = false;
             btnServices.Click += btnServices_Click;
-
+            // 
             // btnExit
+            // 
             btnExit.BackColor = Color.Red;
             btnExit.Location = new Point(418, 386);
+            btnExit.Name = "btnExit";
             btnExit.Size = new Size(200, 50);
+            btnExit.TabIndex = 7;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
-
-            // Writing PictureBox
-            writing.Image = Resources.writing;
+            // 
+            // writing
+            // 
+            writing.Image = Prog7312_POE_Part2.Properties.Resources.writing;
             writing.Location = new Point(119, 119);
+            writing.Name = "writing";
             writing.Size = new Size(136, 112);
             writing.SizeMode = PictureBoxSizeMode.StretchImage;
+            writing.TabIndex = 0;
+            writing.TabStop = false;
             writing.Click += writing_Click;
-
-            // Calendar PictureBox
-            Calendar.Image = Resources.calendar;
+            // 
+            // Calendar
+            // 
+            Calendar.Image = Prog7312_POE_Part2.Properties.Resources.calendar;
             Calendar.Location = new Point(470, 119);
+            Calendar.Name = "Calendar";
             Calendar.Size = new Size(135, 112);
             Calendar.SizeMode = PictureBoxSizeMode.StretchImage;
+            Calendar.TabIndex = 1;
+            Calendar.TabStop = false;
             Calendar.Click += Calendar_Click;
-
-            // Support PictureBox
-            support.Image = Resources.support;
+            // 
+            // support
+            // 
+            support.Image = Prog7312_POE_Part2.Properties.Resources.support;
             support.Location = new Point(820, 119);
+            support.Name = "support";
             support.Size = new Size(135, 112);
             support.SizeMode = PictureBoxSizeMode.StretchImage;
+            support.TabIndex = 2;
+            support.TabStop = false;
             support.Click += support_Click;
-
-            // MainMenu Form
+            // 
+            // MainMenu
+            // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Teal;
@@ -122,7 +149,6 @@ namespace Prog7311_POE_Part2
             Text = "Main Menu";
             TransparencyKey = Color.FromArgb(255, 224, 192);
             Load += MainMenu_Load;
-
             ((System.ComponentModel.ISupportInitialize)writing).EndInit();
             ((System.ComponentModel.ISupportInitialize)Calendar).EndInit();
             ((System.ComponentModel.ISupportInitialize)support).EndInit();

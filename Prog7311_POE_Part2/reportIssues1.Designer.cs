@@ -1,4 +1,4 @@
-﻿namespace Prog7311_POE_Part2
+﻿namespace Prog7312_POE_Part2
 {
     partial class reportIssues1
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reportIssues1));
             rtbDescription = new RichTextBox();
             lblAttachment = new Label();
             lblCategory = new Label();
@@ -38,81 +39,56 @@
             btnAttach = new Button();
             cmbCategory = new ComboBox();
             txtLocation = new TextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // rtbDescription
             // 
-            rtbDescription.Location = new Point(643, 91);
+            resources.ApplyResources(rtbDescription, "rtbDescription");
             rtbDescription.Name = "rtbDescription";
-            rtbDescription.Size = new Size(321, 271);
-            rtbDescription.TabIndex = 19;
-            rtbDescription.Text = "";
             rtbDescription.TextChanged += rtbDescription_TextChanged_1;
             // 
             // lblAttachment
             // 
-            lblAttachment.AutoSize = true;
-            lblAttachment.Location = new Point(28, 240);
+            resources.ApplyResources(lblAttachment, "lblAttachment");
             lblAttachment.Name = "lblAttachment";
-            lblAttachment.Size = new Size(137, 25);
-            lblAttachment.TabIndex = 18;
-            lblAttachment.Text = "No file attached";
             // 
             // lblCategory
             // 
-            lblCategory.AutoSize = true;
-            lblCategory.Location = new Point(28, 171);
+            resources.ApplyResources(lblCategory, "lblCategory");
             lblCategory.Name = "lblCategory";
-            lblCategory.Size = new Size(84, 25);
-            lblCategory.TabIndex = 17;
-            lblCategory.Text = "Category";
             // 
             // lblLocation
             // 
-            lblLocation.AutoSize = true;
-            lblLocation.Location = new Point(28, 97);
+            resources.ApplyResources(lblLocation, "lblLocation");
             lblLocation.Name = "lblLocation";
-            lblLocation.Size = new Size(79, 25);
-            lblLocation.TabIndex = 16;
-            lblLocation.Text = "Location";
             // 
             // progressBar
             // 
-            progressBar.Location = new Point(28, 432);
+            resources.ApplyResources(progressBar, "progressBar");
             progressBar.Name = "progressBar";
-            progressBar.Size = new Size(291, 46);
-            progressBar.TabIndex = 15;
             // 
             // btnBack
             // 
             btnBack.BackColor = Color.Red;
-            btnBack.Location = new Point(760, 432);
+            resources.ApplyResources(btnBack, "btnBack");
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(204, 51);
-            btnBack.TabIndex = 14;
-            btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
             // 
             // btnSubmit
             // 
             btnSubmit.BackColor = Color.Green;
-            btnSubmit.Location = new Point(449, 432);
+            resources.ApplyResources(btnSubmit, "btnSubmit");
             btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(204, 51);
-            btnSubmit.TabIndex = 13;
-            btnSubmit.Text = "Submit ";
             btnSubmit.UseVisualStyleBackColor = false;
             btnSubmit.Click += btnSubmit_Click;
             // 
             // btnAttach
             // 
             btnAttach.BackColor = Color.Azure;
-            btnAttach.Location = new Point(258, 240);
+            resources.ApplyResources(btnAttach, "btnAttach");
             btnAttach.Name = "btnAttach";
-            btnAttach.Size = new Size(307, 43);
-            btnAttach.TabIndex = 12;
-            btnAttach.Text = "Attach File ";
             btnAttach.UseVisualStyleBackColor = false;
             btnAttach.Click += btnAttach_Click;
             // 
@@ -120,26 +96,27 @@
             // 
             cmbCategory.BackColor = Color.FromArgb(192, 192, 255);
             cmbCategory.FormattingEnabled = true;
-            cmbCategory.Location = new Point(258, 163);
+            resources.ApplyResources(cmbCategory, "cmbCategory");
             cmbCategory.Name = "cmbCategory";
-            cmbCategory.Size = new Size(307, 33);
-            cmbCategory.TabIndex = 11;
             cmbCategory.SelectedIndexChanged += cmbCategory_SelectedIndexChanged_1;
             // 
             // txtLocation
             // 
-            txtLocation.Location = new Point(258, 91);
+            resources.ApplyResources(txtLocation, "txtLocation");
             txtLocation.Name = "txtLocation";
-            txtLocation.Size = new Size(307, 31);
-            txtLocation.TabIndex = 10;
             txtLocation.TextChanged += txtLocation_TextChanged_1;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
             // 
             // reportIssues1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
             BackColor = Color.Teal;
-            ClientSize = new Size(993, 574);
+            resources.ApplyResources(this, "$this");
+            Controls.Add(label1);
             Controls.Add(rtbDescription);
             Controls.Add(lblAttachment);
             Controls.Add(lblCategory);
@@ -151,7 +128,6 @@
             Controls.Add(cmbCategory);
             Controls.Add(txtLocation);
             Name = "reportIssues1";
-            Text = "Report Isssue";
             Load += reportIssues1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -171,5 +147,6 @@
         private Button btnAttach;
         private ComboBox cmbCategory;
         private TextBox txtLocation;
+        private Label label1;
     }
 }

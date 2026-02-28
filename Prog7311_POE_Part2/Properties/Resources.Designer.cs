@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Prog7311_POE_Part2.Properties {
+namespace Prog7312_POE_Part2.Properties {
     using System;
     
     

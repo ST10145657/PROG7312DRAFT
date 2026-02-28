@@ -1,0 +1,37 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Prog7312_POE/1.0.0": {
+        "runtime": {
+          "Prog7312_POE.dll": {}
+        },
+        "resources": {
+          "af-ZA/Prog7312_POE.resources.dll": {
+            "locale": "af-ZA"
+          },
+          "en-SS/Prog7312_POE.resources.dll": {
+            "locale": "en-SS"
+          },
+          "en-ZA/Prog7312_POE.resources.dll": {
+            "locale": "en-ZA"
+          },
+          "zu-ZA/Prog7312_POE.resources.dll": {
+            "locale": "zu-ZA"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Prog7312_POE/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

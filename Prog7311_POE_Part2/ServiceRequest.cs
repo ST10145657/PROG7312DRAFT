@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prog7311_POE_Part2
+namespace Prog7312_POE_Part2
 {
     public class ServiceRequest
     {

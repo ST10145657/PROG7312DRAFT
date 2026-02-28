@@ -1,4 +1,4 @@
-﻿namespace Prog7311_POE_Part2
+﻿namespace Prog7312_POE_Part2
 {
     partial class LocalEvents
     {
@@ -20,10 +20,34 @@
             base.Dispose(disposing);
         }
 
+        // Master list of events
+        private List<LocalEvent> allEvents = new List<LocalEvent>();
+
+        // Dictionary (Hash Table) – Fast lookup by Title
+        private Dictionary<string, LocalEvent> eventDictionary =
+            new Dictionary<string, LocalEvent>();
+
+        // Queue – Registration processing (FIFO)
+        private Queue<LocalEvent> registrationQueue =
+            new Queue<LocalEvent>();
+
+        // Stack – Recently viewed events (LIFO)
+        private Stack<LocalEvent> recentlyViewed =
+            new Stack<LocalEvent>();
+
+        // Priority Queue – Upcoming events sorted by Date
+        private PriorityQueue<LocalEvent, DateTime> upcomingEvents =
+            new PriorityQueue<LocalEvent, DateTime>();
+
+        // User search tracking
+        private Dictionary<string, int> searchFrequency =
+            new Dictionary<string, int>();
+
+        
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
+        /// Required method for Designer support - do not modif
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -31,7 +55,7 @@
             listViewEvents = new ListView();
             txtSearch = new TextBox();
             dateTimePicker1 = new DateTimePicker();
-            btnSearch = new Button();
+            btnSearch = new Button(); 
             btnBack = new Button();
             dataGridView1 = new DataGridView();
             lbllocation = new Label();
@@ -43,7 +67,7 @@
             // 
             listViewEvents.Location = new Point(12, 313);
             listViewEvents.Name = "listViewEvents";
-            listViewEvents.Size = new Size(629, 150);
+            listViewEvents.Size = new Size(839, 282);
             listViewEvents.TabIndex = 0;
             listViewEvents.UseCompatibleStateImageBehavior = false;
             listViewEvents.SelectedIndexChanged += listViewEvents_SelectedIndexChanged;
@@ -66,7 +90,7 @@
             // btnSearch
             // 
             btnSearch.BackColor = Color.Green;
-            btnSearch.Location = new Point(647, 342);
+            btnSearch.Location = new Point(861, 483);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(204, 51);
             btnSearch.TabIndex = 3;
@@ -77,7 +101,7 @@
             // btnBack
             // 
             btnBack.BackColor = Color.Red;
-            btnBack.Location = new Point(647, 417);
+            btnBack.Location = new Point(861, 549);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(204, 46);
             btnBack.TabIndex = 4;
@@ -91,7 +115,7 @@
             dataGridView1.Location = new Point(12, 148);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(839, 148);
+            dataGridView1.Size = new Size(1053, 159);
             dataGridView1.TabIndex = 6;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -116,10 +140,10 @@
             // 
             // LocalEvents
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(144F, 144F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.Teal;
-            ClientSize = new Size(877, 490);
+            ClientSize = new Size(1098, 668);
             Controls.Add(lblDate);
             Controls.Add(lbllocation);
             Controls.Add(dataGridView1);

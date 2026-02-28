@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Prog7311_POE_Part2.SharedData;
+using static Prog7312_POE_Part2.SharedData;
 
-namespace Prog7311_POE_Part2
+namespace Prog7312_POE_Part2
 {
     public class ServiceRequestHeap
     {

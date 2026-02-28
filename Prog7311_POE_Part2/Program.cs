@@ -1,8 +1,8 @@
-using Prog7311_POE_Part2;
+using Prog7312_POE_Part2;
 using System;
 using System.Windows.Forms;
 
-namespace Prog7311_POE_Part2
+namespace Prog7312_POE_Part2
 {
     internal static class Program
     {

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.ComponentModel;
 
-namespace Prog7311_POE_Part2
+namespace Prog7312_POE_Part2
 {
     public partial class LocalEvents : Form
     {
@@ -47,13 +47,13 @@ namespace Prog7311_POE_Part2
             }
 
             // 🧹 Community Events
-            AddEvent(new LocalEvent { Title = "Park Cleanup", Category = "Community", Date = DateTime.Now.AddDays(2), Description = "Join the community to clean up Greenfield Park. Gloves and bags provided." });
-            AddEvent(new LocalEvent { Title = "Coding for Beginners Workshop", Category = "Education", Date = DateTime.Now.AddDays(4), Description = "Free coding class hosted by the local library." });
-            AddEvent(new LocalEvent { Title = "Blood Donation Drive", Category = "Health", Date = DateTime.Now.AddDays(1), Description = "Donate blood and help save lives. Refreshments provided." });
+            AddEvent(new LocalEvent { Title = "Park Cleanup", Category = "Public Safety", Date = DateTime.Now.AddDays(2), Description = "Join the community to clean up Greenfield Park. Gloves and bags provided." });
+            AddEvent(new LocalEvent { Title = "Public Transportation", Category = "Utilities", Date = DateTime.Now.AddDays(4), Description = "Workers are on Striking." });
+            AddEvent(new LocalEvent { Title = "Burst pipe", Category = "Water", Date = DateTime.Now.AddDays(1), Description = "Due to old pipes the pipe burst near town." });
 
         }
 
-
+        
 
         private void DisplayAllEvents()
         {

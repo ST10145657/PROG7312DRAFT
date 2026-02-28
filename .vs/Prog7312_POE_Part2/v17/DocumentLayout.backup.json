@@ -1,0 +1,370 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\languagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\languagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\prog7311_poe_part2\\reportissues1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\reportissues1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\prog7311_poe_part2\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\localevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\localevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\servicerequeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\servicerequeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\localevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\localevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\localevents.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\localevents.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\prog7311_poe_part2\\localevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\localevents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\reportissues1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\reportissues1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mnqob\\PROG7311\\Semester 2\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\Properties\\Resources.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\prog7311_poe_part2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\prog7311_poe_part2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\prog7311_poe_part2\\servicerequeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\servicerequeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\servicerequestheap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\servicerequestheap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\servicerequestgraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\servicerequestgraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\servicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\servicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\issuereport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\issuereport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|c:\\users\\mnqob\\source\\repos\\prog7311_poe_part2\\prog7311_poe_part2\\servicerequestnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECDF0FA-2A13-4B6D-AC83-BD87354A0511}|Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj|solutionrelative:prog7311_poe_part2\\servicerequestnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LanguageManager.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\LanguageManager.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\LanguageManager.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\LanguageManager.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\LanguageManager.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwBQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T17:08:26.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "reportIssues1.cs [Design - Afrikaans (South Africa)]",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\reportIssues1.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\reportIssues1.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\reportIssues1.cs [Design - Afrikaans (South Africa)]",
+              "RelativeToolTip": "Prog7311_POE_Part2\\reportIssues1.cs [Design - Afrikaans (South Africa)]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T11:43:41.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\MainMenu.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T15:40:57.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainMenu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\MainMenu.cs [Design]",
+              "RelativeToolTip": "Prog7311_POE_Part2\\MainMenu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T16:43:17.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LocalEvent.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\LocalEvent.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\LocalEvent.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\LocalEvent.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\LocalEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T08:11:30.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LocalEvents.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\LocalEvents.Designer.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\LocalEvents.Designer.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\LocalEvents.Designer.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\LocalEvents.Designer.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwDMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T23:31:11.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LocalEvents.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\LocalEvents.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\LocalEvents.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\LocalEvents.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\LocalEvents.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAcwDAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T22:49:23.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LocalEvents.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\LocalEvents.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\LocalEvents.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\LocalEvents.cs [Design]",
+              "RelativeToolTip": "Prog7311_POE_Part2\\LocalEvents.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T06:43:24.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServiceRequestStatus.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequestStatus.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\ServiceRequestStatus.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequestStatus.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\ServiceRequestStatus.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAWwMoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T23:25:13.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Resources.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\PROG7311\\Semester 2\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\Properties\\Resources.Designer.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\PROG7311\\Semester 2\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\Properties\\Resources.Designer.cs",
+              "ToolTip": "C:\\Users\\mnqob\\PROG7311\\Semester 2\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\Properties\\Resources.Designer.cs",
+              "RelativeToolTip": "..\\..\\..\\PROG7311\\Semester 2\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\Properties\\Resources.Designer.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T23:21:22.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "reportIssues1.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\reportIssues1.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\reportIssues1.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\reportIssues1.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\reportIssues1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T17:49:39.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\Program.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\Program.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\Program.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvxcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T17:37:28.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Resources.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\Properties\\Resources.Designer.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\Properties\\Resources.Designer.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\Properties\\Resources.Designer.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\Properties\\Resources.Designer.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwBQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T17:29:37.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ServiceRequestStatus.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequestStatus.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\ServiceRequestStatus.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequestStatus.cs [Design]",
+              "RelativeToolTip": "Prog7311_POE_Part2\\ServiceRequestStatus.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T15:32:07.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ServiceRequestNode.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequestNode.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\ServiceRequestNode.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequestNode.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\ServiceRequestNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T15:32:06.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ServiceRequestHeap.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequestHeap.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\ServiceRequestHeap.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequestHeap.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\ServiceRequestHeap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T15:32:04.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ServiceRequestGraph.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequestGraph.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\ServiceRequestGraph.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequestGraph.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\ServiceRequestGraph.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T15:32:01.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ServiceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequest.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\ServiceRequest.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\ServiceRequest.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\ServiceRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T15:31:58.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IssueReport.cs",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\IssueReport.cs",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\IssueReport.cs",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\IssueReport.cs",
+              "RelativeToolTip": "Prog7311_POE_Part2\\IssueReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T15:31:38.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Prog7311_POE_Part2.csproj",
+              "DocumentMoniker": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj",
+              "RelativeDocumentMoniker": "Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj",
+              "ToolTip": "C:\\Users\\mnqob\\source\\repos\\Prog7311_POE_Part2\\Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj",
+              "RelativeToolTip": "Prog7311_POE_Part2\\Prog7311_POE_Part2.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-27T15:30:24.307Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
