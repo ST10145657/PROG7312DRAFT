@@ -64,3 +64,4 @@ C:\Users\mnqob\Source\Repos\Prog7311_POE_Part2\Prog7311_POE_Part2\obj\Debug\net9
 C:\Users\mnqob\Source\Repos\Prog7311_POE_Part2\Prog7311_POE_Part2\obj\Debug\net9.0-windows\Prog7311_POE_Part2.genruntimeconfig.cache
 C:\Users\mnqob\Source\Repos\Prog7311_POE_Part2\Prog7311_POE_Part2\obj\Debug\net9.0-windows\ref\Prog7311_POE_Part2.dll
 C:\Users\mnqob\source\repos\Prog7311_POE_Part2\Prog7311_POE_Part2\obj\Debug\net9.0-windows\Prog7312_POE_Part2.reportIssues1.af-ZA.resources
+C:\Users\mnqob\source\repos\Prog7311_POE_Part2\Prog7311_POE_Part2\obj\Debug\net9.0-windows\Prog7311_POE_Part2.sourcelink.json
