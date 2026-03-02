@@ -64,36 +64,6 @@ namespace Prog7312_POE_Part2
             InOrderRec(node.Right, list);
         }
 
-        public void InitializeSampleData()
-        {
-            // 🧹 Community Events -> ServiceRequests
-            var req1 = new ServiceRequest(201, "Greenfield Park", "Community", "Park Cleanup: Join the community to clean up Greenfield Park. Gloves and bags provided.", "Submitted", 2)
-            {
-                CreatedAt = DateTime.Now.AddDays(2)
-            };
-            var req2 = new ServiceRequest(202, "Local Library", "Education", "Coding for Beginners Workshop: Free coding class hosted by the local library.", "Submitted", 1)
-            {
-                CreatedAt = DateTime.Now.AddDays(4)
-            };
-            var req3 = new ServiceRequest(203, "Community Center", "Health", "Blood Donation Drive: Donate blood and help save lives. Refreshments provided.", "Submitted", 3)
-            {
-                CreatedAt = DateTime.Now.AddDays(1)
-            };
-
-            // Insert into BST
-            SharedServiceRequests.RequestBST.Insert(req1);
-            SharedServiceRequests.RequestBST.Insert(req2);
-            SharedServiceRequests.RequestBST.Insert(req3);
-
-            // Add to Graph
-            SharedServiceRequests.RequestGraph.AddRequest(req1);
-            SharedServiceRequests.RequestGraph.AddRequest(req2);
-            SharedServiceRequests.RequestGraph.AddRequest(req3);
-
-            // Example dependencies
-            SharedServiceRequests.RequestGraph.AddDependency(201, 202); // Park Cleanup depends on Coding Workshop
-            SharedServiceRequests.RequestGraph.AddDependency(203, 201); // Blood Drive depends on Park Cleanup
-
-        }
+        
     }
 }

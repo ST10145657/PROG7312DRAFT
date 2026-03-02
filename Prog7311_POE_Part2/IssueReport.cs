@@ -8,6 +8,7 @@ namespace Prog7312_POE_Part2
 {
     public class IssueReport
     {
+        public string Title { get; set; }
         public string Location { get; set; }
         public string Category { get; set; }
         public string Description { get; set; }

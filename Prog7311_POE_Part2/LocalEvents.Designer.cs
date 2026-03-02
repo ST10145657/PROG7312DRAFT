@@ -43,7 +43,7 @@
         private Dictionary<string, int> searchFrequency =
             new Dictionary<string, int>();
 
-        
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -52,10 +52,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LocalEvents));
             listViewEvents = new ListView();
             txtSearch = new TextBox();
             dateTimePicker1 = new DateTimePicker();
-            btnSearch = new Button(); 
+            btnSearch = new Button();
             btnBack = new Button();
             dataGridView1 = new DataGridView();
             lbllocation = new Label();
@@ -65,85 +66,61 @@
             // 
             // listViewEvents
             // 
-            listViewEvents.Location = new Point(12, 313);
+            resources.ApplyResources(listViewEvents, "listViewEvents");
             listViewEvents.Name = "listViewEvents";
-            listViewEvents.Size = new Size(839, 282);
-            listViewEvents.TabIndex = 0;
             listViewEvents.UseCompatibleStateImageBehavior = false;
             listViewEvents.SelectedIndexChanged += listViewEvents_SelectedIndexChanged;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(275, 33);
+            resources.ApplyResources(txtSearch, "txtSearch");
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(300, 31);
-            txtSearch.TabIndex = 5;
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(275, 97);
+            resources.ApplyResources(dateTimePicker1, "dateTimePicker1");
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(300, 31);
-            dateTimePicker1.TabIndex = 2;
             // 
             // btnSearch
             // 
             btnSearch.BackColor = Color.Green;
-            btnSearch.Location = new Point(861, 483);
+            resources.ApplyResources(btnSearch, "btnSearch");
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(204, 51);
-            btnSearch.TabIndex = 3;
-            btnSearch.Text = "Search ";
             btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click_1;
             // 
             // btnBack
             // 
             btnBack.BackColor = Color.Red;
-            btnBack.Location = new Point(861, 549);
+            resources.ApplyResources(btnBack, "btnBack");
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(204, 46);
-            btnBack.TabIndex = 4;
-            btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click_1;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 148);
+            resources.ApplyResources(dataGridView1, "dataGridView1");
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1053, 159);
-            dataGridView1.TabIndex = 6;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // lbllocation
             // 
-            lbllocation.AutoSize = true;
-            lbllocation.Location = new Point(161, 39);
+            resources.ApplyResources(lbllocation, "lbllocation");
             lbllocation.Name = "lbllocation";
-            lbllocation.Size = new Size(84, 25);
-            lbllocation.TabIndex = 7;
-            lbllocation.Text = "Location ";
             // 
             // lblDate
             // 
-            lblDate.AutoSize = true;
-            lblDate.Location = new Point(196, 103);
+            resources.ApplyResources(lblDate, "lblDate");
             lblDate.Name = "lblDate";
-            lblDate.Size = new Size(49, 25);
-            lblDate.TabIndex = 8;
-            lblDate.Text = "Date";
             lblDate.Click += lblDate_Click;
             // 
             // LocalEvents
             // 
-            AutoScaleDimensions = new SizeF(144F, 144F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Dpi;
-            BackColor = Color.Teal;
-            ClientSize = new Size(1098, 668);
+            BackColor = Color.DarkSlateGray;
             Controls.Add(lblDate);
             Controls.Add(lbllocation);
             Controls.Add(dataGridView1);
@@ -153,7 +130,6 @@
             Controls.Add(txtSearch);
             Controls.Add(listViewEvents);
             Name = "LocalEvents";
-            Text = "Local Events";
             Load += LocalEvents_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

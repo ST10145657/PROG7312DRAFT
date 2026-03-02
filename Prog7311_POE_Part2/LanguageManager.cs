@@ -9,7 +9,7 @@ namespace Prog7311_POE_Part2
 {
     public static class LanguageManager
     {
-        public static string CurrentLanguage = "en-ZA"; // default
+        public static string CurrentLanguage = "en-ZA"; // this is the default
 
         public static void SetLanguage(string cultureCode)
 

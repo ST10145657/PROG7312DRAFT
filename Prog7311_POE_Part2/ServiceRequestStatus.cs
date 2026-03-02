@@ -169,7 +169,7 @@ namespace Prog7312_POE_Part2
             // 
             // ServicesRequestStatus
             // 
-            BackColor = Color.Teal;
+            BackColor = Color.DarkSlateGray;
             ClientSize = new Size(1236, 545);
             Controls.Add(Dependencies);
             Controls.Add(btnBack);
@@ -202,6 +202,7 @@ namespace Prog7312_POE_Part2
         private Button btnBack;
         private ListBox Dependencies;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string CurrentCultureCode { get; internal set; }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -213,7 +214,7 @@ namespace Prog7312_POE_Part2
             int id = Convert.ToInt32(row.Cells["ID"].Value);
             txtSelectedId.Text = id.ToString();
 
-            // Show dependencies
+            // Show dependencies//////////
             Dependencies.Items.Clear();
             var deps = SharedServiceRequests.RequestGraph.GetDependencies(id);
             if (deps.Count == 0)
@@ -261,7 +262,7 @@ namespace Prog7312_POE_Part2
             dataGridView1.DataSource = single;
             txtSelectedId.Text = req.ID.ToString();
 
-            // Show dependencies
+            // Show dependencies///////////////////
             Dependencies.Items.Clear();
             var deps = SharedServiceRequests.RequestGraph.GetDependencies(req.ID);
             if (deps.Count == 0) Dependencies.Items.Add("(no dependencies)");

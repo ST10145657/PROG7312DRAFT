@@ -40,6 +40,8 @@
             cmbCategory = new ComboBox();
             txtLocation = new TextBox();
             label1 = new Label();
+            lblTitle = new Label();
+            txtTitle = new TextBox();
             SuspendLayout();
             // 
             // rtbDescription
@@ -51,17 +53,21 @@
             // lblAttachment
             // 
             resources.ApplyResources(lblAttachment, "lblAttachment");
+            lblAttachment.BackColor = SystemColors.ActiveBorder;
             lblAttachment.Name = "lblAttachment";
             // 
             // lblCategory
             // 
             resources.ApplyResources(lblCategory, "lblCategory");
+            lblCategory.BackColor = SystemColors.ActiveBorder;
             lblCategory.Name = "lblCategory";
             // 
             // lblLocation
             // 
             resources.ApplyResources(lblLocation, "lblLocation");
+            lblLocation.BackColor = SystemColors.ActiveBorder;
             lblLocation.Name = "lblLocation";
+            lblLocation.Click += lblLocation_Click;
             // 
             // progressBar
             // 
@@ -109,13 +115,28 @@
             // label1
             // 
             resources.ApplyResources(label1, "label1");
+            label1.BackColor = SystemColors.ActiveBorder;
             label1.Name = "label1";
+            // 
+            // lblTitle
+            // 
+            resources.ApplyResources(lblTitle, "lblTitle");
+            lblTitle.BackColor = SystemColors.ActiveBorder;
+            lblTitle.Name = "lblTitle";
+            lblTitle.Click += lblTitle_Click;
+            // 
+            // txtTitle
+            // 
+            resources.ApplyResources(txtTitle, "txtTitle");
+            txtTitle.Name = "txtTitle";
             // 
             // reportIssues1
             // 
             AutoScaleMode = AutoScaleMode.Inherit;
-            BackColor = Color.Teal;
+            BackColor = Color.DarkSlateGray;
             resources.ApplyResources(this, "$this");
+            Controls.Add(txtTitle);
+            Controls.Add(lblTitle);
             Controls.Add(label1);
             Controls.Add(rtbDescription);
             Controls.Add(lblAttachment);
@@ -148,5 +169,7 @@
         private ComboBox cmbCategory;
         private TextBox txtLocation;
         private Label label1;
+        private Label lblTitle;
+        private TextBox txtTitle;
     }
 }

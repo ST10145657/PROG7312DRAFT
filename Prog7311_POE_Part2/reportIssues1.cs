@@ -37,14 +37,18 @@ namespace Prog7312_POE_Part2
         private void UpdateProgress()
         {
             int progress = 0;
-
+            if (!string.IsNullOrWhiteSpace(txtTitle.Text)) progress += 20;
             if (!string.IsNullOrWhiteSpace(txtLocation.Text)) progress += 25;
             if (cmbCategory.SelectedIndex != -1) progress += 25;
             if (!string.IsNullOrWhiteSpace(rtbDescription.Text)) progress += 25;
             if (!string.IsNullOrWhiteSpace(lblAttachment.Text) && lblAttachment.Text != "No file attached") progress += 25;
 
+            if (progress > progressBar.Maximum)
+                progress = progressBar.Maximum;
+
             progressBar.Value = progress;
         }
+
 
         private void txtLocation_TextChanged_1(object sender, EventArgs e) => UpdateProgress();
         private void cmbCategory_SelectedIndexChanged_1(object sender, EventArgs e) => UpdateProgress();
@@ -52,7 +56,8 @@ namespace Prog7312_POE_Part2
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtLocation.Text) ||
+            if (string.IsNullOrWhiteSpace(txtTitle.Text) ||
+                string.IsNullOrWhiteSpace(txtLocation.Text) ||
                 cmbCategory.SelectedIndex == -1 ||
                 string.IsNullOrWhiteSpace(rtbDescription.Text))
             {
@@ -64,6 +69,7 @@ namespace Prog7312_POE_Part2
             // Create new issue object
             IssueReport issue = new IssueReport
             {
+                Title = txtTitle.Text,
                 Location = txtLocation.Text,
                 Category = cmbCategory.SelectedItem?.ToString(),
                 Description = rtbDescription.Text,
@@ -71,12 +77,12 @@ namespace Prog7312_POE_Part2
             };
 
             // ✅ Save issue into shared list so LocalEvents can access it
-            SharedData.ReportedIssues.Add(issue);
+           ReportedIssues.Add(issue);
 
             int newId = SharedServiceRequests.GetNextId();
-
             var request = new ServiceRequest(
-            id: SharedServiceRequests.RequestHeap.GetAllRequests().Count + 1, // auto ID
+                id: newId,
+                       Title: txtTitle.Text,
             location: txtLocation.Text,
             category: cmbCategory.SelectedItem?.ToString(),
             description: rtbDescription.Text,
@@ -84,12 +90,11 @@ namespace Prog7312_POE_Part2
             priority: 1 // can change later (1 = low, 5 = high)
             );
 
-            SharedServiceRequests.RequestBST.Insert(request);
-            SharedServiceRequests.RequestHeap.Insert(request);
-            SharedServiceRequests.RequestGraph.AddRequest(request);
+            SharedServiceRequests.AddRequest(request);
 
             MessageBox.Show("Issue submitted successfully!\n\n" +
                     $"Service Request ID: {request.ID}\n" +
+                    $"Title: {request.Title}\n" +
                     $"Location: {request.Location}\n" +
                     $"Category: {request.Category}\n" +
                     $"Status: {request.Status}\n\n" +
@@ -139,5 +144,14 @@ namespace Prog7312_POE_Part2
             // Update all button/label texts based on langCode
         }
 
+        private void lblLocation_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

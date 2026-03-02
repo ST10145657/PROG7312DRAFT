@@ -17,6 +17,7 @@ namespace Prog7312_POE_Part2
         private PictureBox writing;
         private PictureBox Calendar;
         private PictureBox support;
+        private Label label1;
 
         public event Action<string>? LanguageChanged;
         private string currentCultureCode = "en-US";
@@ -28,7 +29,8 @@ namespace Prog7312_POE_Part2
 
         private void InitializeComponent()
         {
-            
+            //ListBox Languages;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             btnReport = new Button();
             btnEvents = new Button();
             btnServices = new Button();
@@ -36,6 +38,7 @@ namespace Prog7312_POE_Part2
             writing = new PictureBox();
             Calendar = new PictureBox();
             support = new PictureBox();
+            label1 = new Label();
             Languages = new ListBox();
             ((System.ComponentModel.ISupportInitialize)writing).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Calendar).BeginInit();
@@ -47,96 +50,76 @@ namespace Prog7312_POE_Part2
             Languages.BackColor = Color.White;
             Languages.BorderStyle = BorderStyle.FixedSingle;
             Languages.FormattingEnabled = true;
-            Languages.Items.AddRange(new object[] { "English", "isiZulu", "Afrikaans" });
-            Languages.Location = new Point(12, 25);
+            Languages.Items.AddRange(new object[] { resources.GetString("Languages.Items"), resources.GetString("Languages.Items1"), resources.GetString("Languages.Items2") });
+            resources.ApplyResources(Languages, "Languages");
             Languages.Name = "Languages";
-            Languages.Size = new Size(120, 77);
-            Languages.TabIndex = 3;
             Languages.SelectedIndexChanged += Languages_SelectedIndexChanged;
             // 
             // btnReport
             // 
             btnReport.BackColor = Color.FromArgb(128, 128, 255);
-            btnReport.Location = new Point(86, 237);
+            resources.ApplyResources(btnReport, "btnReport");
             btnReport.Name = "btnReport";
-            btnReport.Size = new Size(200, 50);
-            btnReport.TabIndex = 4;
-            btnReport.Text = "Report Issues";
             btnReport.UseVisualStyleBackColor = false;
             btnReport.Click += btnReport_Click;
             // 
             // btnEvents
             // 
             btnEvents.BackColor = Color.FromArgb(0, 192, 0);
-            btnEvents.Location = new Point(437, 237);
+            resources.ApplyResources(btnEvents, "btnEvents");
             btnEvents.Name = "btnEvents";
-            btnEvents.Size = new Size(200, 50);
-            btnEvents.TabIndex = 5;
-            btnEvents.Text = "Local Events & Announcements";
             btnEvents.UseVisualStyleBackColor = false;
             btnEvents.Click += btnEvents_Click;
             // 
             // btnServices
             // 
             btnServices.BackColor = Color.FromArgb(0, 192, 192);
-            btnServices.Location = new Point(786, 237);
+            resources.ApplyResources(btnServices, "btnServices");
             btnServices.Name = "btnServices";
-            btnServices.Size = new Size(200, 50);
-            btnServices.TabIndex = 6;
-            btnServices.Text = "Services Request Status";
             btnServices.UseVisualStyleBackColor = false;
             btnServices.Click += btnServices_Click;
             // 
             // btnExit
             // 
             btnExit.BackColor = Color.Red;
-            btnExit.Location = new Point(418, 386);
+            resources.ApplyResources(btnExit, "btnExit");
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(200, 50);
-            btnExit.TabIndex = 7;
-            btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 
             // writing
             // 
-            writing.Image = Prog7312_POE_Part2.Properties.Resources.writing;
-            writing.Location = new Point(119, 119);
+            resources.ApplyResources(writing, "writing");
             writing.Name = "writing";
-            writing.Size = new Size(136, 112);
-            writing.SizeMode = PictureBoxSizeMode.StretchImage;
-            writing.TabIndex = 0;
             writing.TabStop = false;
             writing.Click += writing_Click;
             // 
             // Calendar
             // 
-            Calendar.Image = Prog7312_POE_Part2.Properties.Resources.calendar;
-            Calendar.Location = new Point(470, 119);
+            resources.ApplyResources(Calendar, "Calendar");
             Calendar.Name = "Calendar";
-            Calendar.Size = new Size(135, 112);
-            Calendar.SizeMode = PictureBoxSizeMode.StretchImage;
-            Calendar.TabIndex = 1;
             Calendar.TabStop = false;
             Calendar.Click += Calendar_Click;
             // 
             // support
             // 
-            support.Image = Prog7312_POE_Part2.Properties.Resources.support;
-            support.Location = new Point(820, 119);
+            resources.ApplyResources(support, "support");
             support.Name = "support";
-            support.Size = new Size(135, 112);
-            support.SizeMode = PictureBoxSizeMode.StretchImage;
-            support.TabIndex = 2;
             support.TabStop = false;
             support.Click += support_Click;
             // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.BackColor = Color.Gray;
+            label1.Name = "label1";
+            // 
             // MainMenu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Teal;
-            ClientSize = new Size(1024, 473);
+            BackColor = Color.DarkSlateGray;
+            Controls.Add(label1);
             Controls.Add(writing);
             Controls.Add(Calendar);
             Controls.Add(support);
@@ -146,60 +129,73 @@ namespace Prog7312_POE_Part2
             Controls.Add(btnServices);
             Controls.Add(btnExit);
             Name = "MainMenu";
-            Text = "Main Menu";
             TransparencyKey = Color.FromArgb(255, 224, 192);
             Load += MainMenu_Load;
             ((System.ComponentModel.ISupportInitialize)writing).EndInit();
             ((System.ComponentModel.ISupportInitialize)Calendar).EndInit();
             ((System.ComponentModel.ISupportInitialize)support).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
             if (DesignMode) return;
-            if (Languages.Items.Count > 0)
+            if (Languages != null && Languages.Items.Count > 0)
                 Languages.SelectedIndex = 0;
+            SharedData.SharedServiceRequests.InitializeSampleData();
         }
 
-        private void ChangeLanguage(string langCode)
+        private void ChangeLanguage(string cultureCode)
         {
             if (DesignMode) return;
 
-            currentCultureCode = langCode;
+            currentCultureCode = cultureCode;
 
-            btnReport.Text = langCode == "zu-ZA" ? "Bika Izinkinga" : langCode == "af-ZA" ? "Rapporteer Probleme" : "Report Issues";
-            btnEvents.Text = langCode == "zu-ZA" ? "Imicimbi" : langCode == "af-ZA" ? "Gebeurtenisse" : "Local Events";
-            btnServices.Text = langCode == "zu-ZA" ? "Izinsizakalo" : langCode == "af-ZA" ? "Dienste" : "Services";
-            btnExit.Text = langCode == "zu-ZA" ? "Phuma" : langCode == "af-ZA" ? "Afsluit" : "Exit";
+            // 🔹 THIS IS WHAT YOU WERE MISSING
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultureCode);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(cultureCode);
 
-            // Notify all child forms
-            LanguageChanged?.Invoke(langCode);
+
+
+            Controls.Clear();
+            InitializeComponent();
         }
 
         private void Languages_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (DesignMode || Languages.SelectedItem == null) return;
+            if (Languages.SelectedIndex == -1)
+                return;
 
-            string cultureCode = Languages.SelectedItem.ToString() switch
+            if (Languages.SelectedIndex == -1)
+                return;
+
+            string culture = "en-ZA"; // default
+
+            switch (Languages.SelectedIndex)
             {
-                "isiZulu" => "zu-ZA",
-                "Afrikaans" => "af-ZA",
-                _ => "en-US"
-            };
-            ChangeLanguage(cultureCode);
+                case 0:
+                    culture = "en-ZA";
+                    break;
+                case 1:
+                    culture = "zu-ZA";
+                    break;
+                case 2:
+                    culture = "af-ZA";
+                    break;
+            }
+
+            ChangeLanguage(culture);
         }
 
         // Button Handlers
         private void btnReport_Click(object sender, EventArgs e)
         {
-            if (DesignMode) return;
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(currentCultureCode);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(currentCultureCode);
 
             var reportForm = new reportIssues1();
-            reportForm.CurrentCultureCode = currentCultureCode;
-            reportForm.ChangeLanguage(currentCultureCode);
-
-            LanguageChanged += reportForm.ChangeLanguage;
+            
 
             reportForm.Show();
             Hide();

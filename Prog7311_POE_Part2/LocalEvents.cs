@@ -24,6 +24,7 @@ namespace Prog7312_POE_Part2
             listViewEvents.Columns.Clear();
             listViewEvents.Columns.Add("Title", 180);
             listViewEvents.Columns.Add("Category", 100);
+            listViewEvents.Columns.Add("Location", 120);
             listViewEvents.Columns.Add("Date", 100);
             listViewEvents.Columns.Add("Description", 250);
 
@@ -45,12 +46,34 @@ namespace Prog7312_POE_Part2
 
                 eventsByDate[ev.Date.Date].Add(ev);
             }
+            AddEvent(new LocalEvent
+            {
+                Title = "Park Cleanup",
+                Category = "Public Safety",
+                Location = "Greenfield Park",   
+                Date = DateTime.Now.AddDays(2),
+                Description = "Join the community to clean up Greenfield Park. Gloves and bags provided."
+            });
 
-            // 🧹 Community Events
-            AddEvent(new LocalEvent { Title = "Park Cleanup", Category = "Public Safety", Date = DateTime.Now.AddDays(2), Description = "Join the community to clean up Greenfield Park. Gloves and bags provided." });
-            AddEvent(new LocalEvent { Title = "Public Transportation", Category = "Utilities", Date = DateTime.Now.AddDays(4), Description = "Workers are on Striking." });
-            AddEvent(new LocalEvent { Title = "Burst pipe", Category = "Water", Date = DateTime.Now.AddDays(1), Description = "Due to old pipes the pipe burst near town." });
+            AddEvent(new LocalEvent
+            {
+                Title = "Public Transportation",
+                Category = "Utilities",
+                Location = "City Bus Depot",  
+                Date = DateTime.Now.AddDays(4),
+                Description = "Workers are on striking."
+            });
 
+            AddEvent(new LocalEvent
+            {
+                Title = "Burst Pipe",
+                Category = "Water",
+                Location = "Main Street",       
+                Date = DateTime.Now.AddDays(1),
+                Description = "Due to old pipes the pipe burst near town."
+            });
+
+            
         }
 
         
@@ -59,20 +82,21 @@ namespace Prog7312_POE_Part2
         {
             listViewEvents.Items.Clear();
 
-            // 🟢 Show default local events
+            //Show default local events
             foreach (var category in eventsByDate.Values)
             {
                 foreach (var ev in category)
                 {
                     var item = new ListViewItem(ev.Title);
                     item.SubItems.Add(ev.Category);
+                    item.SubItems.Add(ev.Location);
                     item.SubItems.Add(ev.Date.ToShortDateString());
                     item.SubItems.Add(ev.Description);
                     listViewEvents.Items.Add(item);
                 }
             }
 
-            // 🟡 Show reported issues from ReportIssue form
+            // Show reported issues from ReportIssue form
             if (SharedData.ReportedIssues.Count > 0)
             {
                 var header = new ListViewItem("—— Reported Issues ——");
@@ -81,8 +105,9 @@ namespace Prog7312_POE_Part2
 
                 foreach (var issue in SharedData.ReportedIssues)
                 {
-                    var item = new ListViewItem($"Issue at: {issue.Location}");
+                    var item = new ListViewItem(issue.Title);
                     item.SubItems.Add(issue.Category);
+                    item.SubItems.Add(issue.Location); 
                     item.SubItems.Add(DateTime.Now.ToShortDateString());
                     item.SubItems.Add(issue.Description);
                     listViewEvents.Items.Add(item);
@@ -92,7 +117,7 @@ namespace Prog7312_POE_Part2
 
 
 
-        // 🔹 NEW: Display events in DataGridView
+        //Display events in DataGridView
         private void DisplayInDataGridView()
         {
             // Combine sample events + reported issues into one list for DataGridView
@@ -101,6 +126,7 @@ namespace Prog7312_POE_Part2
                 {
                     Title = ev.Title,
                     Category = ev.Category,
+                    Location = ev.Location,
                     Date = ev.Date.ToShortDateString(),
                     Description = ev.Description
                 })
@@ -109,8 +135,9 @@ namespace Prog7312_POE_Part2
             // Add reported issues
             allEvents.AddRange(SharedData.ReportedIssues.Select(issue => new
             {
-                Title = $"Issue at: {issue.Location}",
+                Title = issue.Title,  
                 Category = issue.Category,
+                Location = issue.Location,   
                 Date = DateTime.Now.ToShortDateString(),
                 Description = issue.Description
             }));
@@ -133,12 +160,14 @@ namespace Prog7312_POE_Part2
                 .Where(ev =>
                     ev.Title.ToLower().Contains(searchText) ||
                     ev.Category.ToLower().Contains(searchText) ||
+                    ev.Location.ToLower().Contains(searchText) ||
                     ev.Description.ToLower().Contains(searchText) ||
                     ev.Date.Date == selectedDate)
                .Select(ev => new
                {
                    ev.Title,
                    ev.Category,
+                   ev.Location,
                    Date = ev.Date.ToShortDateString(),
                    ev.Description
                })
@@ -147,13 +176,15 @@ namespace Prog7312_POE_Part2
             // Include Reported Issues in search results
             results.AddRange(SharedData.ReportedIssues
                 .Where(issue =>
+                issue.Title.ToLower().Contains(searchText) ||
                     issue.Location.ToLower().Contains(searchText) ||
                     issue.Category.ToLower().Contains(searchText) ||
                     issue.Description.ToLower().Contains(searchText))
                 .Select(issue => new
                 {
-                    Title = $"Issue at: {issue.Location}",
+                    Title = issue.Title,  
                     Category = issue.Category,
+                    Location = issue.Location,   
                     Date = DateTime.Now.ToShortDateString(),
                     Description = issue.Description
                 }));
@@ -165,13 +196,14 @@ namespace Prog7312_POE_Part2
             {
                 var item = new ListViewItem(ev.Title);
                 item.SubItems.Add(ev.Category);
+                item.SubItems.Add(ev.Location);
                 item.SubItems.Add(ev.Date);
                 item.SubItems.Add(ev.Description);
 
                 listViewEvents.Items.Add(item);
             }
 
-            // 🔹 NEW: update DataGridView with search results
+            //Update DataGridView with search results
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = results;
 
@@ -188,8 +220,6 @@ namespace Prog7312_POE_Part2
             Close();
         }
 
-        // Keep all other empty event handlers as-is
-        //private void btnSearch_Click_1(object sender, EventArgs e) { }
         private void txtSearch_TextChanged(object sender, EventArgs e) { }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
@@ -207,10 +237,11 @@ namespace Prog7312_POE_Part2
 
             string title = selectedItem.SubItems[0].Text;
             string category = selectedItem.SubItems[1].Text;
-            string date = selectedItem.SubItems[2].Text;
-            string description = selectedItem.SubItems[3].Text;
+            string location = selectedItem.SubItems[2].Text;
+            string date = selectedItem.SubItems[3].Text;
+            string description = selectedItem.SubItems[4].Text;
 
-            string message = $"Title: {title}\nCategory: {category}\nDate: {date}\nDescription: {description}";
+            string message = $"Title: {title}\n Location: {location} \nCategory: {category}\nDate: {date}\nDescription: {description}";
 
             MessageBox.Show(message, "Event / Issue Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
